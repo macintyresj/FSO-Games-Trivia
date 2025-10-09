@@ -130,7 +130,7 @@ function showQuestion(category) {
 function handleAnswer(correct) {
   stopTimer();
   if (correct) {
-    scores[currentTeam - 1] += 10;
+    scores[currentTeam - 1] += 100;
     alert("✅ ¡Correcto!");
   } else {
     alert("❌ Incorrecto!");
@@ -167,3 +167,4 @@ function startModalTimer() {
 function stopTimer() {
   clearInterval(timer);
 }
+
