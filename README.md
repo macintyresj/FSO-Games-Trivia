@@ -1,17 +1,17 @@
 # FSO-Games-Trivia
 Based on Preguntados Game
 
-Un juego de trivia estilo “Preguntados” para 2 equipos, con ruleta de categorías, preguntas en pop-up modal, temporizador neón y puntajes automáticos. Hecho con HTML, CSS, JavaScript y Bootstrap.
+Un juego de trivia estilo “Preguntados” para 2 equipos, con ruleta de categorías, preguntas en pop-up modal, temporizador y puntajes automáticos. Hecho con HTML, CSS, JavaScript y Bootstrap.
 
 📝 Características
 
 Dos equipos con nombres personalizados.
 
-Ruleta de 5 categorías con animación colorida y efecto neón.
+Ruleta de 5 categorías con animación colorida.
 
 Preguntas mostradas en modal pop-up.
 
-Temporizador de 20 segundos para responder.
+Temporizador de 30 segundos para responder.
 
 Puntajes automáticos y turnos alternados.
 
@@ -23,7 +23,7 @@ Efectos de neón para botones, texto y temporizador.
 trivia/
 │
 ├── index.html        # Página principal
-├── style.css         # Estilos neon y Bootstrap
+├── style.css         # Estilos
 ├── script.js         # Lógica de juego: ruleta, turnos, temporizador
 └── questions.js      # Preguntas del juego (puedes reemplazar con tus propias preguntas)
 
