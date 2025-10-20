@@ -178,7 +178,7 @@ function showQuestion(category) {
 function handleAnswer(correct) {
   stopTimer();
   if (correct) {
-    scores[currentTeam - 1] += 1000;
+    scores[currentTeam - 1] += 10000;
     Swal.fire({
       title: '¡Correcto!',
       text: '🎉 Muy bien hecho.',
@@ -239,4 +239,5 @@ function startModalTimer() {
 function stopTimer() {
   clearInterval(timer);
 }
+
 
