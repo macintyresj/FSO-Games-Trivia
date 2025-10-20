@@ -51,28 +51,16 @@ const questionsData = {
     { text: "¿Qué instrumento se utiliza para medir la temperatura?", options: ["Barómetro", "Termómetro", "Higrómetro", "Anemómetro"], correct: 1 }
   ]
    "TAX": [
-    { text: "The federal corporate tax rate is:", options: ["15%", "21%", "Corporations don't pay taxes", "35%"], correct: 1 },
-    { text: "What is the current limitation on use of NOLs for U.S. corporations?", options: ["100% offset", "80% offset", "No deduction", "Only in year incurred"], correct: 1 },
-    { text: "What apportionment formula are states increasingly adopting?", options: ["Equally weighted three factor", "Single sales factor", "Triple weighted sales factor"], correct: 1 },
-    { text: "What does code 20AE stand for in a K-1?", options: ["Excess Business Interest Income", "Excess Taxable Income", "Earnings Before Interest"], correct: 0 },
-    { text: "When working on a Foreign partnership with PFICs, how are you reporting?", options: ["Part VII K-3 & 8621", "Only 8621", "Only Part VII K-3"], correct: 0 },
-    { text: "My Entity is foreign and has PFICs, do I need to complete form 8621?", options: ["Yes", "No"], correct: 1 },
-    { text: "Which form would not be completed by a partnership?", options: ["8621", "8804", "926", "1042"], correct: 2 },
-    { text: "What is considered a reportable partner for M-3 purposes?", options: ["Entity filing Sch. M-3 with ≥50% ownership", "All partners", "Only foreign partners", "All domestic partners"], correct: 0 },
-    { text: "How are capital losses treated under IRC §1211?", options: ["Deducted vs ordinary income", "Fully deductible", "Deductible only to extent of capital gains", "Not deductible"], correct: 2 },
-    { text: "Why include a corporation in a fund structure?", options: ["Block ECI/FDAP to foreign partners", "For cash management", "For bookkeeping only", "To issue dividends"], correct: 0 },
-    { text: "If K-1 Item L ending balance is negative, you should?", options: ["Cry", "Ask senior", "Ignore", "Track outside basis"], correct: 3 },
-    { text: "What form must be filed within 30 days of adopting a plan of complete liquidation?", options: ["1120", "926", "966", "4797"], correct: 2 },
-    { text: "Capital loss carrybacks for corporations?", options: ["Carry back 5 yrs", "Carry forward only", "Carry back 3 & forward 5", "Carry back 1 & forward 20"], correct: 2 },
-    { text: "What's a dividend?", options: ["Distribution out of E&P", "Return of capital", "Capital gain", "Loan repayment"], correct: 0 },
-    { text: "Which type of investors are specially sensitive to UBTI?", options: ["Tax-exempt", "Domestic C Corp", "Foreign Trust", "Individual"], correct: 0 },
-    { text: "Tax implication for partner distribution exceeding basis?", options: ["Fully taxable ordinary", "Return of capital", "Capital gain", "Exempt"], correct: 2 },
-    { text: "Why complete Form 8949?", options: ["Short/long term capital gains/losses", "Income & deductions", "Schedule M-3 reporting", "Basis adjustment"], correct: 0 },
-    { text: "Which info return reports interests in foreign disregarded entities?", options: ["8858", "8865", "8621", "8804"], correct: 0 },
-    { text: "If book depreciation > tax depreciation, is it favorable?", options: ["Yes", "No"], correct: 1 },
-    { text: "Primary purpose of tax basis balance sheet?", options: ["GAAP compliance", "Depreciation calculation", "Owner-level basis & tax consequences", "Reconcile bank statements"], correct: 2 },
-    { text: "When prepare AICPA checklists?", options: ["Before tax return prep", "After tax return prep", "Anytime", "Never"], correct: 0 },
-    { text: "Reasons to update underlying estimate K-1 with actual K-1?", options: ["Most up-to-date info, avoid future 8082, avoid next year true-up", "Only for auditing", "Optional", "Not needed"], correct: 0 },
-    { text: "Upon sale of business property, why consider recapture?", options: ["Increase taxable income", "Reduce taxable income", "Change income character", "None"], correct: 2 },
+  { text: "Which are the forms related to \"ECI\" and \"FDAP\" reporting?", options: ["8804/05s & 1042/1042s", "1065 & 1120", "8082 & 8865", "926 & 1042"], correct: 0 },
+  { text: "The federal corporate tax rate is:", options: ["15%", "21%", "Corporations don't pay taxes", "35%"], correct: 1 },
+  { text: "What is the current limitation on use of NOLs for U.S. corporations?", options: ["100% offset", "80% offset", "No deduction", "Only in year incurred"], correct: 1 },
+  { text: "What apportionment formula are states increasingly adopting?", options: ["Equally weighted three factor", "Single sales factor", "Triple weighted sales factor"], correct: 1 },
+  { text: "What does code 20AE stand for in a K-1?", options: ["Excess Business Interest Income", "Excess Taxable Income", "Earnings Before Interest"], correct: 0 },
+  { text: "When working on a Foreign partnership with PFICs, how are you reporting?", options: ["Part VII K-3 & 8621", "Only 8621", "Only Part VII K-3"], correct: 0 },
+  { text: "My Entity is foreign and has PFICs, do I need to complete form 8621?", options: ["Yes", "No"], correct: 1 },
+  { text: "Which form would not be completed by a partnership?", options: ["8621", "8804", "926", "1042"], correct: 2 },
+  { text: "What is considered a reportable partner for M-3 purposes?", options: ["Entity filing Sch. M-3 with ≥50% ownership", "All partners", "Only foreign partners", "All domestic partners"], correct: 0 },
+  { text: "How are capital losses treated under IRC §1211?", options: ["Deducted vs ordinary income", "Fully deductible", "Deductible only to extent of capital gains", "Not deductible"], correct: 2 }
 };
+
 
