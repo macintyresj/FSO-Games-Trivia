@@ -13,7 +13,7 @@ const modalAnswers = document.getElementById('modalAnswers');
 const modalTimer = document.getElementById('modalTimer');
 
 let ctx = wheel.getContext("2d");
-const categories = ["Deportes", "Mundi", "Cultura", "Ciencias", "Categoría 5"];
+const categories = ["Deportes", "Mundi", "Cultura", "Ciencias", "TAX"];
 let currentTeam = 1;
 let teamNames = ["Equipo 1", "Equipo 2"];
 let scores = [0, 0];
@@ -239,5 +239,6 @@ function startModalTimer() {
 function stopTimer() {
   clearInterval(timer);
 }
+
 
 
