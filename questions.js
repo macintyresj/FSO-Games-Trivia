@@ -1,7 +1,6 @@
 const questionsData = {
   "Deportes": [
     { text: "¿Quién ganó el premio al Jugador del Partido en la final de la Copa del Mundo 2014?", options: ["Mario Götze", "Sergio Agüero", "Lionel Messi", "Bastian Schweinsteiger"], correct: 0 },
-    { text: "¿A quién pertenece esta camiseta?", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correct: 0 }, // agregar foto
     { text: "Después de perder a un jugador clave en el primer partido, ¿qué equipo llegó a las semifinales de la Eurocopa 2020?", options: ["Dinamarca", "España", "Gales", "Inglaterra"], correct: 0 },
     // { text: "¿Qué exinternacional bielorruso jugó en el Arsenal entre 2005 y 2008?", options: ["Alexander Hleb", "Maksim Romaschenko", "Valyantsin Byalkevich", "Yuri Zhenov"], correct: 0 },
     { text: "¿Quién es el máximo goleador actual de la UEFA Champions League?", options: ["Alan Shearer", "Thierry Henry", "Cristiano Ronaldo", "Robert Lewandowski"], correct: 0 },
@@ -63,6 +62,7 @@ const questionsData = {
   { text: "How are capital losses treated under IRC §1211?", options: ["Deducted vs ordinary income", "Fully deductible", "Deductible only to extent of capital gains", "Not deductible"], correct: 2 }
      ]
 };
+
 
 
 
