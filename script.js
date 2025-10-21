@@ -191,7 +191,7 @@ function handleAnswer(correct) {
   } else {
     Swal.fire({
       title: 'Incorrecto',
-      text: `❌ Intenta de nuevo en la próxima. La respuesta correcta era: ${q.options[q.correct]}`,
+      html: `❌ La respuesta correcta era: <strong>${escapeHtml(q.options[q.correct])}</strong>`,
       icon: 'error',
       confirmButtonColor: '#f29ca3',
       background: '#fffafc',
@@ -239,6 +239,7 @@ function startModalTimer() {
 function stopTimer() {
   clearInterval(timer);
 }
+
 
 
 
