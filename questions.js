@@ -49,7 +49,7 @@ const questionsData = {
     { text: "¿En qué estado de la materia se encuentra el aire?", options: ["Líquido", "Sólido", "Gaseoso", "Plasma"], correct: 2 },
     { text: "¿Cómo se llama el satélite natural de la Tierra?", options: ["Marte", "Sol", "Luna", "Venus"], correct: 2 },
     { text: "¿Qué instrumento se utiliza para medir la temperatura?", options: ["Barómetro", "Termómetro", "Higrómetro", "Anemómetro"], correct: 1 }
-  ]
+  ],
    "TAX": [
   { text: "Which are the forms related to \"ECI\" and \"FDAP\" reporting?", options: ["8804/05s & 1042/1042s", "1065 & 1120", "8082 & 8865", "926 & 1042"], correct: 0 },
   { text: "The federal corporate tax rate is:", options: ["15%", "21%", "Corporations don't pay taxes", "35%"], correct: 1 },
@@ -61,6 +61,8 @@ const questionsData = {
   { text: "Which form would not be completed by a partnership?", options: ["8621", "8804", "926", "1042"], correct: 2 },
   { text: "What is considered a reportable partner for M-3 purposes?", options: ["Entity filing Sch. M-3 with ≥50% ownership", "All partners", "Only foreign partners", "All domestic partners"], correct: 0 },
   { text: "How are capital losses treated under IRC §1211?", options: ["Deducted vs ordinary income", "Fully deductible", "Deductible only to extent of capital gains", "Not deductible"], correct: 2 }
+     ]
 };
+
 
 
