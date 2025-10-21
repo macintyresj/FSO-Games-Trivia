@@ -159,7 +159,7 @@ function showQuestion(category) {
     modalAnswers.appendChild(btn);
   });
 
-  timeLeft = 30;
+  timeLeft = 60;
   updateModalTimer();
   startModalTimer();
 
@@ -231,3 +231,4 @@ function startModalTimer() {
 function stopTimer() {
   clearInterval(timer);
 }
+
