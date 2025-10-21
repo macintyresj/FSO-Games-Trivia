@@ -5,6 +5,7 @@ const turnTitle = document.getElementById('turnTitle');
 const wheel = document.getElementById('wheel');
 const spinBtn = document.getElementById('spinBtn');
 const scoreText = document.getElementById('scoreText');
+
 // Modal
 const questionModal = new bootstrap.Modal(document.getElementById('questionModal'));
 const modalCategory = document.getElementById('modalCategory');
@@ -18,9 +19,8 @@ let currentTeam = 1;
 let teamNames = ["Equipo 1", "Equipo 2"];
 let scores = [0, 0];
 const usedQuestions = {}; // seguimiento de preguntas usadas
-let highlightedCategory = null; // para resaltar el segmento ganador
+let highlightedCategory = null; 
 let spinning = false;
-// Temporizador
 let timer;
 let timeLeft = 20;
 
@@ -45,7 +45,6 @@ function drawWheel() {
     ctx.fill();
     ctx.save();
 
-    // Texto de categoría
     ctx.translate(150,150);
     ctx.rotate(arc * i + arc/2);
     ctx.fillStyle = "#333";
@@ -55,14 +54,12 @@ function drawWheel() {
     ctx.restore();
   });
 
-  //Borde decorativo
   ctx.lineWidth = 4;
   ctx.strokeStyle = "#fff";
   ctx.beginPath();
   ctx.arc(150,150,150,0,2*Math.PI);
   ctx.stroke();
 
-  // ✨ Resaltar categoría seleccionada
   if (highlightedCategory !== null) {
     const start = highlightedCategory * arc;
     const end = (highlightedCategory + 1) * arc;
@@ -82,16 +79,15 @@ function drawWheel() {
 
 drawWheel();
 
-//Inicio del juego
+// Inicio del juego
 startBtn.onclick = () => {
   teamNames[0] = document.getElementById('team1Name').value || "Equipo 1";
   teamNames[1] = document.getElementById('team2Name').value || "Equipo 2";
   setup.classList.add('d-none');
   game.classList.remove('d-none');
-  updateScore(); // 👈 esto ahora actualiza nombres y puntajes
+  updateScore();
   updateTurn();
 };
-
 
 function updateTurn() {
   turnTitle.textContent = `Turno de ${teamNames[currentTeam - 1]}`;
@@ -99,20 +95,17 @@ function updateTurn() {
   document.getElementById('player2Box').classList.toggle('active-player', currentTeam === 2);
 }
 
-
-//Actualizar puntaje
-
 function updateScore() {
   document.getElementById("player1Name").textContent = teamNames[0];
   document.getElementById("player2Name").textContent = teamNames[1];
   document.getElementById("player1Score").textContent = scores[0];
   document.getElementById("player2Score").textContent = scores[1];
 }
-//Girar ruleta
+
+// Girar ruleta
 spinBtn.onclick = () => {
   const randomCategory = Math.floor(Math.random() * categories.length);
-  
-  // Reinicia la rotación antes de girar
+
   wheel.style.transition = "none";
   wheel.style.transform = "rotate(0deg)";
 
@@ -123,13 +116,13 @@ spinBtn.onclick = () => {
 
     setTimeout(() => {
       highlightedCategory = randomCategory;
-      drawWheel(); // Redibuja con la categoría iluminada
+      drawWheel();
       showQuestion(categories[randomCategory]);
     }, 2200);
   }, 50);
 };
 
-//Mostrar pregunta en modal (sin repetir)
+// Mostrar pregunta en modal
 function showQuestion(category) {
   if (!usedQuestions[category]) usedQuestions[category] = [];
 
@@ -139,7 +132,7 @@ function showQuestion(category) {
   if (available.length === 0) {
     Swal.fire({
       title: "Sin preguntas",
-      text: "Ya no quedan preguntas en esta categoría 😅",
+      text: "Ya no quedan preguntas en esta categoría",
       icon: "info",
       confirmButtonColor: "#84f9be"
     });
@@ -152,7 +145,7 @@ function showQuestion(category) {
   usedQuestions[category].push(qIndex);
 
   modalCategory.textContent = category;
-  modalQuestion.textContent = q.text;
+  modalQuestion.textContent = q.question;
   modalAnswers.innerHTML = "";
 
   q.options.forEach((ans, i) => {
@@ -161,12 +154,11 @@ function showQuestion(category) {
     btn.textContent = ans;
     btn.onclick = () => {
       questionModal.hide();
-      setTimeout(() => handleAnswer(i === q.correct), 400);
+      setTimeout(() => handleAnswer(i === q.correct, q), 400);
     };
     modalAnswers.appendChild(btn);
   });
 
-  // Temporizador
   timeLeft = 30;
   updateModalTimer();
   startModalTimer();
@@ -174,14 +166,14 @@ function showQuestion(category) {
   questionModal.show();
 }
 
-//Evaluar respuesta
-function handleAnswer(correct) {
+// Evaluar respuesta
+function handleAnswer(correct, q) {
   stopTimer();
   if (correct) {
     scores[currentTeam - 1] += 10000;
     Swal.fire({
       title: '¡Correcto!',
-      text: '🎉 Muy bien hecho.',
+      text: 'Muy bien hecho.',
       icon: 'success',
       confirmButtonColor: '#7fd1ae',
       background: '#fffafc',
@@ -191,7 +183,7 @@ function handleAnswer(correct) {
   } else {
     Swal.fire({
       title: 'Incorrecto',
-      html: `<div>❌ La respuesta correcta era: <strong>${q.options[q.correct]}</strong></div>`,
+      html: `<div> La respuesta correcta era: <strong>${q.options[q.correct]}</strong></div>`,
       icon: 'error',
       confirmButtonColor: '#f29ca3',
       background: '#fffafc',
@@ -204,9 +196,9 @@ function handleAnswer(correct) {
   updateTurn();
 }
 
-//Temporizador del modal
+// Temporizador
 function updateModalTimer() {
-  modalTimer.textContent = `⏱️ Tiempo restante: ${timeLeft}s`;
+  modalTimer.textContent = `Tiempo restante: ${timeLeft}s`;
   if (timeLeft <= 5) {
     modalTimer.classList.add("warning");
   } else {
@@ -223,7 +215,7 @@ function startModalTimer() {
       clearInterval(timer);
       questionModal.hide();
       Swal.fire({
-        title: '⏰ ¡Tiempo agotado!',
+        title: '¡Tiempo agotado!',
         text: 'No alcanzaste a responder.',
         icon: 'warning',
         confirmButtonColor: '#6bebffff',
@@ -231,7 +223,7 @@ function startModalTimer() {
         timer: 1600,
         showConfirmButton: false
       });
-      setTimeout(() => handleAnswer(false), 400);
+      setTimeout(() => handleAnswer(false, {options: ["No hay"], correct: 0}), 400);
     }
   }, 1000);
 }
@@ -239,12 +231,3 @@ function startModalTimer() {
 function stopTimer() {
   clearInterval(timer);
 }
-
-
-
-
-
-
-
-
-
