@@ -10,7 +10,7 @@ const questionsData = {
     { question: "¿En qué año obtuvo Argentina su primera medalla de oro olímpica?", options: ["1924", "1948", "1952", "1960"], correct: 0 }
   ],
   "Cultura & Mundi": [
-    { question: "¿Cuál es la ciudad más antigua de Europa?", options: ["Londres", "Roma", "Matera", "Atenas"], correct: 3 },
+    // { question: "¿Cuál es la ciudad más antigua de Europa?", options: ["Londres", "Roma", "Matera", "Atenas"], correct: 3 },]
     { question: "¿Cuál es el país más grande de África?", options: ["Congo", "Libia", "Argelia", "Sudáfrica"], correct: 2 },
     { question: "¿Cuántos océanos hay en el planeta tierra?", options: ["4", "5", "6", "7"], correct: 1 },
     { question: "¿Qué país no está en espera para unirse a la unión europea?", options: ["Macedonia del norte", "Suiza", "Turquía", "Georgia"], correct: 1 },
@@ -21,7 +21,7 @@ const questionsData = {
     // { question: "¿Qué país tiene la mayor población del mundo?", options: ["Estados Unidos", "India", "China", "Brasil"], correct: 2 },
     { question: "¿En qué océano se encuentra la isla de Madagascar?", options: ["Océano Atlántico", "Océano Índico", "Océano Pacífico", "Océano Ártico"], correct: 1 },
     { question: "¿Qué país tiene la mayor reserva de agua dulce del mundo?", options: ["Canadá", "Brasil", "Rusia", "Estados Unidos"], correct: 1 },  
-    { question: "¿Cuál es la provincia argentina con más superficie de glaciares?", options: ["Mendoza", "Santa Cruz", "Tierra del Fuego", "Chubut"], correct: 1 },
+    // { question: "¿Cuál es la provincia argentina con más superficie de glaciares?", options: ["Mendoza", "Santa Cruz", "Tierra del Fuego", "Chubut"], correct: 1 },
     { question: "¿Quién escribió la novela 'Sobre héroes y tumbas'?", options: ["Julio Cortázar", "Adolfo Bioy Casares", "Ernesto Sabato", "Ricardo Piglia"], correct: 2 },
     { question: "¿Qué país fue sede del primer Mundial de fútbol femenino?", options: ["Suecia", "China", "Estados Unidos", "Alemania"], correct: 1 },
     { question: "¿Cuál es el nombre oficial de la moneda utilizada actualmente en Japón?", options: ["Yen", "Won", "Renminbi", "Baht"], correct: 0 },
@@ -97,6 +97,7 @@ const questionsData = {
     }
 ]
 };
+
 
 
 
