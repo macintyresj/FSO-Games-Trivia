@@ -53,7 +53,7 @@ const questionsData = {
   { question: "What is the current limitation on use of NOLs for U.S. corporations?", options: ["100% offset", "80% offset", "No deduction", "Only in year incurred"], correct: 1 },
   { question: "What apportionment formula are states increasingly adopting?", options: ["Equally weighted three factor", "Single sales factor", "Triple weighted sales factor"], correct: 1 },
   { question: "What does code 20AE stand for in a K-1?", options: [ "Excess Taxable Income", "Earnings Before Interest", "Excess Business Interest Income"], correct: 0 },
-  { question: "When working on a Foreign partnership with PFICs, how are you reporting?", options: ["Part VII K-3 & 8621", "Only 8621", "Only Part VII K-3"], correct: 0 },
+  // { question: "When working on a Foreign partnership with PFICs, how are you reporting?", options: ["Part VII K-3 & 8621", "Only 8621", "Only Part VII K-3"], correct: 2 },
   { question: "My Entity is foreign and has PFICs, do I need to complete form 8621?", options: ["Yes", "No"], correct: 1 },
   { question: "Which form would not be completed by a partnership?", options: ["8621", "8804", "926", "1042"], correct: 2 },
   { question: "What is considered a reportable partner for M-3 purposes?", options: ["Entity filing Sch. M-3 with ≥50% ownership", "All partners", "Only foreign partners", "All domestic partners"], correct: 0 },
@@ -78,7 +78,7 @@ const questionsData = {
     { 
         "question": "If I miss filling an extension for a partnership, when do I have to fill the return?", 
         "options": ["March 15", "April 15", "February 15", "January 1"], 
-        "correct": 1
+        "correct": 0
     },
     { 
         "question": "How many months is the time extension if we fill an extension of either form 1065 or 1120?", 
@@ -97,6 +97,7 @@ const questionsData = {
     }
 ]
 };
+
 
 
 
