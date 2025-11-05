@@ -83,7 +83,7 @@ const questionsData = {
     { 
         "question": "How many months is the time extension if we fill an extension of either form 1065 or 1120?", 
         "options": [ "3 months", "4 months", "6 months","2 weeks"], 
-        "correct": 3 
+        "correct": 2 
     },
     { 
         "question": "What does NOL stand for?", 
@@ -97,6 +97,7 @@ const questionsData = {
     }
 ]
 };
+
 
 
 
