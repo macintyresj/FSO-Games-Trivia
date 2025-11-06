@@ -55,7 +55,7 @@ const questionsData = {
   { question: "What does code 20AE stand for in a K-1?", options: [ "Excess Taxable Income", "Earnings Before Interest", "Excess Business Interest Income"], correct: 0 },
   // { question: "When working on a Foreign partnership with PFICs, how are you reporting?", options: ["Part VII K-3 & 8621", "Only 8621", "Only Part VII K-3"], correct: 2 },
   { question: "My Entity is foreign and has PFICs, do I need to complete form 8621?", options: ["Yes", "No"], correct: 1 },
-  { question: "Which form would not be completed by a partnership?", options: ["8621", "8804", "926", "1042"], correct: 2 },
+  // { question: "Which form would not be completed by a partnership?", options: ["8621", "8804", "926", "1042"], correct: 2 },
   { question: "What is considered a reportable partner for M-3 purposes?", options: ["Entity filing Sch. M-3 with ≥50% ownership", "All partners", "Only foreign partners", "All domestic partners"], correct: 0 },
   { question: "How are capital losses treated under IRC §1211?", options: ["Deducted vs ordinary income", "Fully deductible", "Deductible only to extent of capital gains", "Not deductible"], correct: 2 }
      ],
@@ -97,6 +97,7 @@ const questionsData = {
     }
 ]
 };
+
 
 
 
